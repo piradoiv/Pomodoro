@@ -65,7 +65,7 @@ object FormPomodoro: TFormPomodoro
     end
   end
   object PomodoroTimer: TTimer
-    Interval = 333
+    Interval = 250
     OnTimer = OnTickHandler
     left = 104
     top = 8
