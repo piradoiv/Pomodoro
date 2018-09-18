@@ -1,7 +1,7 @@
 # Pomodoro
 This is a simple [Pomodoro](https://en.wikipedia.org/wiki/Pomodoro_Technique) cross-platform app written in [Free Pascal](https://www.freepascal.org) and [Lazarus](http://www.lazarus-ide.org).
 
-![Screenshot](Screenshot.png)
+![Screenshot](images/Screenshot.png)
 
 An executable can be downloaded for macOS X under [Releases](https://github.com/piradoiv/Pomodoro/releases) section. It should just works fine on Windows and Linux, if you have time to build it on your platform.
 
