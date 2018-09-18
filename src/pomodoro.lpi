@@ -14,7 +14,6 @@
         <TextName Value="RicardoCruz.Pomodoro.Pomodoro"/>
         <TextDesc Value="Simple Pomodoro"/>
       </XPManifest>
-      <Icon Value="0"/>
     </General>
     <VersionInfo>
       <UseVersionInfo Value="True"/>

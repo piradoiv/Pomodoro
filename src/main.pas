@@ -26,6 +26,8 @@ type
     procedure FormCreate(Sender: TObject);
     procedure OnTickHandler(Sender: TObject);
     procedure ResetClick(Sender: TObject);
+    procedure SetLabelsAndTitle;
+    procedure SetColors;
   private
     Pomodoro: TPomodoro;
   end;
@@ -45,21 +47,39 @@ begin
   ResetClick(Self);
 end;
 
+procedure TFormPomodoro.ResetClick(Sender: TObject);
+begin
+  if Pomodoro.GetPendingSeconds > 0 then
+    Exit;
+  Pomodoro.StartNewPomodoro;
+  FormPomodoro.Color := DEFAULT_BG;
+  LabelPendingTime.Font.Color := DEFAULT_FG;
+  LabelInfo.Font.Color := DEFAULT_FG;
+end;
+
 procedure TFormPomodoro.OnTickHandler(Sender: TObject);
-var
-  BgColor, FgColor: TColor;
-  PendingSeconds: integer;
 begin
   if LabelPendingTime.Caption = Pomodoro.GetFormattedTime then
     Exit;
 
+  SetLabelsAndTitle;
+  SetColors;
+end;
+
+procedure TFormPomodoro.SetLabelsAndTitle;
+begin
   LabelPendingTime.Caption := Pomodoro.GetFormattedTime;
   LabelInfo.Caption := Pomodoro.GetStatus;
   Caption := Pomodoro.GetTitle;
+end;
 
+procedure TFormPomodoro.SetColors;
+var
+  BgColor, FgColor: TColor;
+  PendingSeconds: integer;
+begin
   PendingSeconds := Pomodoro.GetPendingSeconds;
-  if PendingSeconds >= 0 then
-    Exit;
+  if PendingSeconds > 0 then Exit;
 
   BgColor := DEFAULT_BG;
   FgColor := DEFAULT_FG;
@@ -72,16 +92,6 @@ begin
   FormPomodoro.Color := BgColor;
   LabelPendingTime.Font.Color := FgColor;
   LabelInfo.Font.Color := FgColor;
-end;
-
-procedure TFormPomodoro.ResetClick(Sender: TObject);
-begin
-  if Pomodoro.GetPendingSeconds > 0 then
-    Exit;
-  Pomodoro.StartNewPomodoro;
-  FormPomodoro.Color := DEFAULT_BG;
-  LabelPendingTime.Font.Color := DEFAULT_FG;
-  LabelInfo.Font.Color := DEFAULT_FG;
 end;
 
 end.
