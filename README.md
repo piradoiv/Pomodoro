@@ -7,9 +7,9 @@ An executable can be downloaded for macOS under [Releases](https://github.com/pi
 
 ## How it works
 
-1. Open the app, it will start the countdown automatically
-2. It will start blinking in red when your Pomodoro is over
-3. Click on the app, it will start the next countdown
+1. The countdown will start automatically, focus on your task!
+2. When the current Pomodoro is over, the app will start blinking in red, recommending you to take a little break
+3. When you are ready, click on the app to start your next Pomodoro
 
 ## Missing things
 
