@@ -79,7 +79,8 @@ var
   PendingSeconds: integer;
 begin
   PendingSeconds := Pomodoro.GetPendingSeconds;
-  if PendingSeconds > 0 then Exit;
+  if PendingSeconds > 0 then
+    Exit;
 
   BgColor := DEFAULT_BG;
   FgColor := DEFAULT_FG;
