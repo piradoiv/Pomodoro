@@ -3,7 +3,7 @@ This is a simple [Pomodoro](https://en.wikipedia.org/wiki/Pomodoro_Technique) cr
 
 ![Screenshot](images/Screenshot.png)
 
-An executable can be downloaded for macOS X under [Releases](https://github.com/piradoiv/Pomodoro/releases) section. It should just works fine on Windows and Linux, if you have time to build it on your platform.
+An executable can be downloaded for macOS under [Releases](https://github.com/piradoiv/Pomodoro/releases) section. It should just works fine on Windows and Linux, if you have time to build it on your platform.
 
 ## How it works
 
