@@ -8,6 +8,12 @@ uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls,
   ExtCtrls, Core;
 
+const
+  DEFAULT_BG = clDefault;
+  DEFAULT_FG = clDefault;
+  ALERT_BG = clRed;
+  ALERT_FG = clWhite;
+
 type
 
   { TFormPomodoro }
@@ -47,12 +53,12 @@ begin
   if Pomodoro.GetPendingSeconds >= 0 then
     Exit;
 
-  BgColor := clDefault;
-  FgColor := clDefault;
+  BgColor := DEFAULT_BG;
+  FgColor := DEFAULT_FG;
   if Pomodoro.GetPendingSeconds mod 2 <> 0 then
   begin
-    BgColor := clRed;
-    FgColor := clWhite;
+    BgColor := ALERT_BG;
+    FgColor := ALERT_FG;
   end;
 
   FormPomodoro.Color := BgColor;
@@ -65,8 +71,8 @@ begin
   if Pomodoro.GetPendingSeconds > 0 then
     Exit;
   Pomodoro.StartNewPomodoro;
-  FormPomodoro.Color := clDefault;
-  LabelPendingTime.Font.Color := clDefault;
+  FormPomodoro.Color := DEFAULT_BG;
+  LabelPendingTime.Font.Color := DEFAULT_FG;
 end;
 
 end.
