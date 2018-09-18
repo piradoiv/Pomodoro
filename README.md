@@ -3,7 +3,7 @@ This is a simple Pomodoro cross-platform app written in Free Pascal and Lazarus.
 
 ![Screenshot](Screenshot.png)
 
-## How it works
+## How it works
 
 1. Open the app, it will start the countdown automatically
 2. It will start blinking in red when your Pomodoro is over
