@@ -26,8 +26,6 @@ type
     procedure ResetClick(Sender: TObject);
   private
     Pomodoro: TPomodoro;
-  public
-
   end;
 
 var
