@@ -44,7 +44,7 @@ implementation
 procedure TFormPomodoro.FormCreate(Sender: TObject);
 begin
   Pomodoro := TPomodoro.Create;
-  ResetClick(Self);
+  SetLabelsAndTitle;
 end;
 
 procedure TFormPomodoro.ResetClick(Sender: TObject);
