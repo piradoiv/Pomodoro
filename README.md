@@ -3,6 +3,8 @@ This is a simple Pomodoro cross-platform app written in Free Pascal and Lazarus.
 
 ![Screenshot](Screenshot.png)
 
+An executable can be downloaded for macOS X under [Releases](https://github.com/piradoiv/Pomodoro/releases) section. It should just works fine on Windows and Linux, if you have time to build it on your platform.
+
 ## How it works
 
 1. Open the app, it will start the countdown automatically
