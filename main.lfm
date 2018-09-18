@@ -1,39 +1,73 @@
 object FormPomodoro: TFormPomodoro
-  Left = 1207
+  Left = 1031
   Height = 161
-  Top = 239
+  Top = 361
   Width = 239
   Caption = 'Pomodoro'
   ClientHeight = 161
   ClientWidth = 239
+  Constraints.MinHeight = 125
+  Constraints.MinWidth = 200
   OnClick = ResetClick
   OnCreate = FormCreate
   Position = poDesktopCenter
   LCLVersion = '2.1.0.0'
-  object LabelPendingTime: TLabel
+  object PanelPomodoro: TPanel
     AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
     AnchorSideTop.Control = Owner
     AnchorSideTop.Side = asrCenter
-    AnchorSideRight.Control = Owner
-    AnchorSideRight.Side = asrBottom
-    Left = 0
-    Height = 82
-    Top = 39
-    Width = 239
-    Alignment = taCenter
-    Anchors = [akTop, akLeft, akRight]
-    AutoSize = False
-    Caption = '25:00'
-    Font.Height = 50
-    Layout = tlCenter
-    ParentColor = False
-    ParentFont = False
-    OnClick = ResetClick
+    Left = 48
+    Height = 75
+    Top = 43
+    Width = 142
+    Align = alCustom
+    AutoSize = True
+    BevelOuter = bvNone
+    ClientHeight = 75
+    ClientWidth = 142
+    TabOrder = 0
+    object LabelPendingTime: TLabel
+      AnchorSideLeft.Control = PanelPomodoro
+      AnchorSideTop.Control = PanelPomodoro
+      AnchorSideRight.Side = asrBottom
+      Left = 0
+      Height = 59
+      Top = 0
+      Width = 142
+      Alignment = taCenter
+      Anchors = [akTop, akLeft, akRight]
+      Caption = '25:00'
+      Font.Height = 50
+      Layout = tlCenter
+      ParentColor = False
+      ParentFont = False
+      OnClick = ResetClick
+    end
+    object LabelInfo: TLabel
+      AnchorSideLeft.Control = PanelPomodoro
+      AnchorSideTop.Control = LabelPendingTime
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = PanelPomodoro
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = PanelPomodoro
+      AnchorSideBottom.Side = asrBottom
+      Left = 0
+      Height = 16
+      Top = 59
+      Width = 142
+      Alignment = taCenter
+      Anchors = [akTop, akLeft, akRight]
+      Caption = ' '
+      ParentColor = False
+      WordWrap = True
+      OnClick = ResetClick
+    end
   end
-  object PomoTimer: TTimer
+  object PomodoroTimer: TTimer
     Interval = 333
     OnTimer = OnTickHandler
-    left = 32
-    top = 16
+    left = 104
+    top = 8
   end
 end

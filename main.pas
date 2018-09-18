@@ -19,8 +19,10 @@ type
   { TFormPomodoro }
 
   TFormPomodoro = class(TForm)
+    LabelInfo: TLabel;
     LabelPendingTime: TLabel;
-    PomoTimer: TTimer;
+    PanelPomodoro: TPanel;
+    PomodoroTimer: TTimer;
     procedure FormCreate(Sender: TObject);
     procedure OnTickHandler(Sender: TObject);
     procedure ResetClick(Sender: TObject);
@@ -48,6 +50,7 @@ var
   BgColor, FgColor: TColor;
 begin
   LabelPendingTime.Caption := Pomodoro.GetFormattedTime;
+  LabelInfo.Caption := Pomodoro.GetStatus;
   if Pomodoro.GetPendingSeconds >= 0 then
     Exit;
 
@@ -61,6 +64,7 @@ begin
 
   FormPomodoro.Color := BgColor;
   LabelPendingTime.Font.Color := FgColor;
+  LabelInfo.Font.Color := FgColor;
 end;
 
 procedure TFormPomodoro.ResetClick(Sender: TObject);
@@ -71,6 +75,7 @@ begin
   Pomodoro.StartNewPomodoro;
   FormPomodoro.Color := DEFAULT_BG;
   LabelPendingTime.Font.Color := DEFAULT_FG;
+  LabelInfo.Font.Color := DEFAULT_FG;
 end;
 
 end.

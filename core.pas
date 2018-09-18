@@ -23,6 +23,7 @@ type
     procedure StartNewPomodoro;
     function GetFormattedTime: string;
     function GetPendingSeconds: integer;
+    function GetStatus: string;
     function GetTitle: string;
   end;
 
@@ -62,6 +63,12 @@ end;
 function TPomodoro.GetPendingSeconds: integer;
 begin
   Result := SECONDS_PER_POMODORO - SecondsBetween(Now, FStartTime);
+end;
+
+function TPomodoro.GetStatus: string;
+begin
+  Result := 'Focus on your task';
+  if GetPendingSeconds < 0 then Result := 'Take a break and, click to continue';
 end;
 
 function TPomodoro.GetTitle: string;
