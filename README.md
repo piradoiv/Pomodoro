@@ -1,5 +1,5 @@
 # Pomodoro
-This is a simple Pomodoro cross-platform app written in [Free Pascal](https://www.freepascal.org) and [Lazarus](http://www.lazarus-ide.org).
+This is a simple [Pomodoro](https://en.wikipedia.org/wiki/Pomodoro_Technique) cross-platform app written in [Free Pascal](https://www.freepascal.org) and [Lazarus](http://www.lazarus-ide.org).
 
 ![Screenshot](Screenshot.png)
 
