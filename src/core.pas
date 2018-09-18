@@ -31,13 +31,6 @@ implementation
 
 { TPomodoro }
 
-function TPomodoro.PrepareDigits(Digits: integer): string;
-begin
-  if Digits < 0 then
-    Digits := -Digits;
-  Result := AddChar('0', IntToStr(Digits), 2);
-end;
-
 constructor TPomodoro.Create;
 begin
   StartNewPomodoro;
@@ -63,6 +56,13 @@ end;
 function TPomodoro.GetPendingSeconds: integer;
 begin
   Result := SECONDS_PER_POMODORO - SecondsBetween(Now, FStartTime);
+end;
+
+function TPomodoro.PrepareDigits(Digits: integer): string;
+begin
+  if Digits < 0 then
+    Digits := -Digits;
+  Result := AddChar('0', IntToStr(Digits), 2);
 end;
 
 function TPomodoro.GetStatus: string;
