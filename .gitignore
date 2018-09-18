@@ -1,6 +1,6 @@
-/Pomodoro.app
-/Pomodoro
-/backup
-/lib
+/src/Pomodoro.app
+/src/Pomodoro
+/src/backup
+/src/lib
 /*.lps
 /*.res
