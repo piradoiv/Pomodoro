@@ -11,5 +11,5 @@ This is a simple Pomodoro cross-platform app written in Free Pascal and Lazarus.
 
 ## Missing things
 
-- The break isn't implemented yet
-- A little bit of UX, so the _How it works_ section isn't needed ;)
+- The break isn't implemented yet (1.1.0)
+- ~~A little bit of UX, so the _How it works_ section isn't needed ;)~~ (1.1.0)
