@@ -43,7 +43,7 @@ procedure TFormPomodoro.OnTickHandler(Sender: TObject);
 var
   BgColor, FgColor: TColor;
 begin
-  LabelPendingTime.Caption := Pomodoro.GetFormatted;
+  LabelPendingTime.Caption := Pomodoro.GetFormattedTime;
   if Pomodoro.GetPendingSeconds >= 0 then
     Exit;
 
@@ -61,7 +61,7 @@ end;
 
 procedure TFormPomodoro.ResetClick(Sender: TObject);
 begin
-  Caption := Format('Pomodoro #%d', [Pomodoro.CurrentPomodoro]);
+  Caption := Pomodoro.GetTitle;
   if Pomodoro.GetPendingSeconds > 0 then
     Exit;
   Pomodoro.StartNewPomodoro;

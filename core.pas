@@ -22,8 +22,8 @@ type
     constructor Create;
     procedure StartNewPomodoro;
     function GetPendingSeconds: integer;
-    function GetFormatted: string;
-    function CurrentPomodoro: integer;
+    function GetFormattedTime: string;
+    function GetTitle: string;
   end;
 
 implementation
@@ -53,7 +53,7 @@ begin
   Result := SECONDS_PER_POMODORO - SecondsBetween(Now, FStartTime);
 end;
 
-function TPomodoro.GetFormatted: string;
+function TPomodoro.GetFormattedTime: string;
 var
   SecondsPending, Minutes, Seconds: integer;
 begin
@@ -64,9 +64,9 @@ begin
     Result := Concat('-', Result);
 end;
 
-function TPomodoro.CurrentPomodoro: integer;
+function TPomodoro.GetTitle: string;
 begin
-  Result := FCurrentPomodoro;
+  Result := Format('Pomodoro #%d', [FCurrentPomodoro]);
 end;
 
 end.
